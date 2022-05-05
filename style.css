@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;0,700;1,400&display=swap");
+
+:root {
+  /* ======text var============== */
+  --PaleVioletsub-headingatthetopoftheappUI: hsl(276, 100%, 81%);
+  --chatontheleft: hsl(276, 55%, 52%);
+  --chatontheright: hsl(271, 15%, 43%);
+  --placeholdertext: hsl(206, 6%, 79%);
+  --mainheading: hsl(271, 36%, 24%);
+  --paragraph: hsl(270, 7%, 64%);
+
+  /* ============bg gradient var=========== */
+  --LightMagenta: hsl(293, 100%, 63%);
+  --LightViolet: hsl(264, 100%, 61%);
+
+  /* ===========secondary options=========== */
+  --White: hsl(0, 0%, 100%);
+  --appbackground: hsl(270, 20%, 96%);
+  --submitbuttonbackground: hsl(271, 36%, 24%);
+  --radiobuttonoutline: hsl(289, 100%, 72%);
+  /* ===========font family============ */
+  --rubik: "Rubik", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--appbackground);
+  background: url(../mobile-bg.png);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =======ajudting phone======= */
+.phone {
+  margin-top: 50px;
+  margin-left: 100px;
+  background-color: var(--White);
+  width: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+/* ======== profile area======== */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0px 0px 5px 5px;
+  background: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+}
+/* setting profile */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-top: 30px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+/* =======before for the phone cam thing */
+.name::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 20px;
+  background: var(--White);
+  position: absolute;
+  border-radius: 0px 0px 12px 12px;
+  top: 59px;
+}
+/* =========arrow======== */
+.arrow {
+  transform: rotate(-90deg);
+  color: var(--White);
+}
+
+.fa-solid {
+  padding-top: 20px;
+}
+/* =========profile pic======= */
+.contact img {
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+/* ==========main name=========== */
+.name {
+  color: var(--White);
+  font-family: var(--rubik);
+  font-size: 15px;
+}
+/* ============availability===== */
+.available {
+  font-family: var(--rubik);
+  font-size: 12px;
+  color: var(--White);
+  opacity: 0.5;
+}
+/* =======dots========= */
+.dots {
+  padding-right: 10px;
+  color: var(--White);
+  cursor: pointer;
+}
+/* ======the app chat styling= */
+.chat-app {
+  background-color: var(--appbackground);
+  margin: 10px;
+  border-radius: 30px 30px 30px 30px;
+  overflow: hidden;
+  font-family: var(--rubik);
+}
+/* =========adjusting images =======*/
+.dog {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.2rem;
+  margin-right: 10px;
+}
+.dog img {
+  width: 40px;
+  border-radius: 8px;
+}
+/* ========my-chats===== */
+.my-chat {
+  background-color: var(--placeholdertext);
+  padding: 10px;
+  text-align: start;
+  font-size: 12px;
+  max-width: 60%;
+  margin: 10px 0px;
+  border-radius: 12px;
+  box-shadow: 2px 3px 2px var(--paragraph);
+  margin-left: 10px;
+}
+.my-chat p {
+  color: var(--chatontheleft);
+}
+/* =======her chat====== */
+.her-reply {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.her-chat {
+  background-color: var(--White);
+  font-size: 12px;
+  padding: 10px;
+  text-align: start;
+  font-size: 12px;
+  max-width: 60%;
+  margin: 10px 0px;
+  border-radius: 12px;
+  box-shadow: 2px 3px 2px var(--paragraph);
+  margin-right: 10px;
+}
+/* =========adjusting info and pricing==== */
+.flex {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+}
+.info {
+  width: 70%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  border-radius: 10px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-left: 3px;
+}
+.time p {
+  font-family: var(--rubik);
+  font-size: 12px;
+  color: var(--White);
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+/* ==========adjusting message==== */
+input[type="text"] {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-right: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  /* ----------insert background image to put the arrow and then set position right */
+  background-image: url(../submit.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: right;
+}
+::placeholder {
+  font-family: var(--rubik);
+
+  font-size: 12px;
+  color: var(--placeholdertext);
+  margin-left: 10px;
+}
+/* ========text========== */
+.text {
+  width: 300px;
+  margin-left: 150px;
+}
+.text h1 {
+  font-family: var(--rubik);
+  color: var(--mainheading);
+  margin: 15px 0px;
+}
+.text p {
+  width: 80%;
+  line-height: 1.5rem;
+  font-family: var(--rubik);
+  color: var(--paragraph);
+}
+/* =======responsive for laptop */
+@media (min-width: 700px) {
+  body {
+    background: url(../bgimage.png);
+    background-repeat: no-repeat;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .text p {
+    width: 100%;
+  }
+}
